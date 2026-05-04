@@ -1,0 +1,173 @@
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modalContent {
+    background: white;
+    width: 95%;
+    max-width: 480px;
+    border-radius: 20px;
+    padding: 25px;
+    border-top: 5px solid #10b981;
+    animation: zoomIn 0.2s ease-out;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.modalHeader h3 {
+    margin: 0;
+    color: #1e293b;
+}
+
+.closeModal {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #94a3b8;
+}
+
+.renewBody {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.subscriberInfo {
+    background: #f0fdf4;
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    border: 1px dashed #10b981;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.inputGroup label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.modernSelect {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #e2e8f0;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.calculationSummary {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.calcRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 5px;
+}
+
+.addedDays {
+    color: #10b981;
+    font-weight: 700;
+}
+
+.calcDivider {
+    border: none;
+    border-top: 1px dashed #e2e8f0;
+    margin: 8px 0;
+}
+
+.calcRowTotal {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 800;
+    font-size: 15px;
+    margin-top: 8px;
+    color: #1e293b;
+}
+
+.totalDays {
+    color: #2563eb;
+}
+
+.modalActions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.confirmRenewBtn {
+    flex: 2;
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.confirmRenewBtn:hover {
+    background: #059669;
+}
+
+.cancelBtn {
+    flex: 1;
+    background: #f1f5f9;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #64748b;
+    font-weight: 600;
+}

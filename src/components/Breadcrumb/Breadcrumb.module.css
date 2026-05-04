@@ -1,0 +1,11 @@
+.Breadcrumb {
+  background-color: white;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #5853A3;
+margin-bottom: 10px;
+}

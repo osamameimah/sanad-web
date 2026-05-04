@@ -1,0 +1,166 @@
+.container {
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.95), rgba(15, 15, 26, 0.98));
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 20px;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  box-shadow: var(--shadow-lg), 0 0 60px rgba(212, 175, 55, 0.1);
+  animation: float 6s ease-in-out infinite alternate;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.windowDots {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 1rem;
+}
+
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.dotRed { background: #ef4444; }
+.dotYellow { background: #f59e0b; }
+.dotGreen { background: #10b981; }
+
+.windowBar {
+  flex: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+  align-self: center;
+  margin-right: 8px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.statTile {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
+  padding: 10px 12px;
+  border-right-width: 3px;
+  border-right-style: solid;
+}
+
+.statLabel {
+  color: #888;
+  font-size: 0.7rem;
+  margin-bottom: 4px;
+}
+
+.statValue {
+  font-weight: 900;
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+}
+
+.tableRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  gap: 8px;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  flex: 2;
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #D4AF37, #B8962E);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0f0f1a;
+  flex-shrink: 0;
+}
+
+.userName {
+  color: #ddd;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.amount {
+  color: #999;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  flex: 1;
+  text-align: center;
+}
+
+.status {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.successMessage {
+  margin-top: 0.75rem;
+  background: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  border-radius: 9px;
+  padding: 9px 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.messageContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.messageTitle {
+  color: #34D399;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.messageDesc {
+  color: #888;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 480px) {
+  .tableRow {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .userInfo {
+    flex: 100%;
+    margin-bottom: 5px;
+  }
+  
+  .amount {
+    text-align: right;
+    flex: 1;
+  }
+}

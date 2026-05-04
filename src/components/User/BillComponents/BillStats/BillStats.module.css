@@ -1,0 +1,34 @@
+.statusCardsContainer {
+    display: flex;
+    gap: 12px;
+    flex: 1;
+    justify-content: flex-end;
+}
+.statusCard {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 12px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+}
+.statusCard p { margin: 0; color: #64748b; }
+.statusCard span {
+    font-size: 16px;
+    font-weight: 800;
+    color: #0f172a;
+    background: #e2e8f0;
+    padding: 2px 8px;
+    border-radius: 6px;
+}
+.statusCard.unpaid span { color: #ef4444; background: #fee2e2; }
+.statusCard.paid span { color: #10b981; background: #d1fae5; }
+
+@media (max-width: 768px) {
+    .statusCardsContainer { justify-content: space-between; flex-wrap: wrap; }
+    .statusCard { flex: 1; justify-content: center; font-size: 12px; }
+}

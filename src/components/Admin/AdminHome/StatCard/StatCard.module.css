@@ -1,0 +1,110 @@
+/* Base Card Style */
+.statCard {
+  background: var(--surface, #ffffff);
+  border-radius: 20px;
+  padding: 30px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 
+              0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+              0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Icon Container & Effects */
+.iconContainer {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.iconBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  opacity: 0.12;
+  z-index: -1;
+}
+
+.statIcon {
+  font-size: 24px;
+}
+
+/* Text Content */
+.statContent {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  flex-grow: 1;
+}
+
+.statValue {
+  font-size: 20px;
+  font-weight: 800;
+  color: #000; /* تم التعديل للأسود كما في الكود الأصلي */
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: var(--text-muted, #6b7280);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* Decorator */
+.cardDecorator {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  bottom: -60px;
+  right: -60px;
+  background: currentColor;
+  opacity: 0.03;
+  z-index: 0;
+}
+
+/* Gradients */
+.blueCard .iconBg { background-color: #3b82f6; }
+.blueCard .statIcon { color: #2563eb; }
+.blueCard .cardDecorator { color: #3b82f6; }
+
+.yellowCard .iconBg { background-color: #f59e0b; }
+.yellowCard .statIcon { color: #d97706; }
+.yellowCard .cardDecorator { color: #f59e0b; }
+
+.greenCard .iconBg { background-color: #10b981; }
+.greenCard .statIcon { color: #059669; }
+.greenCard .cardDecorator { color: #10b981; }
+
+.redCard .iconBg { background-color: #ef4444; }
+.redCard .statIcon { color: #dc2626; }
+.redCard .cardDecorator { color: #ef4444; }
+
+@media (max-width: 480px) {
+  .statCard { padding: 20px; gap: 15px; }
+  .iconContainer { width: 50px; height: 50px; }
+  .statIcon { font-size: 20px; }
+  .statValue { font-size: 26px; }
+  .statLabel { font-size: 13px; }
+}

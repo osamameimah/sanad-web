@@ -1,16 +1,17 @@
 {
-  "name": "sanad-project",
-  "version": "0.1.0",
+  "name": "sanad-fintech",
+  "version": "2.0.0",
   "private": true,
+  "description": "منصة الأتمتة المالية والتدقيق الذكي",
+  "homepage": "https://sanad-finance.com",
   "dependencies": {
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.2",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
+    "@emailjs/browser": "^4.4.1",
+    "lucide-react": "^0.577.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.30.3",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "recharts": "^2.10.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -20,8 +21,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {

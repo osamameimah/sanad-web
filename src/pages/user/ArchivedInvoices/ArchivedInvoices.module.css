@@ -1,0 +1,17 @@
+ .container {
+    direction: rtl;
+    background: #f8fafc;
+    min-height: 100vh;
+    /* padding: 20px; */
+}
+
+.statsBar {
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.statsBar strong {
+    color: #2563eb;
+}

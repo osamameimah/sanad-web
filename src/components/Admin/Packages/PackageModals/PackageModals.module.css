@@ -1,0 +1,29 @@
+.modalOverlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(4px); display: flex; justify-content: center; align-items: center; z-index: 2000;
+}
+.modalContent { background: white; width: 95%; max-width: 500px; border-radius: 20px; padding: 25px; animation: zoomIn 0.2s ease-out; }
+@keyframes zoomIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+.modalHeader { display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 20px; align-items: center;}
+.closeModal { background: none; border: none; font-size: 24px; cursor: pointer; color: #94a3b8; }
+
+.inputGroup { margin-bottom: 15px; text-align: right; }
+.inputGroup label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 13px; color: #475569; }
+.inputGroup input, .inputGroup select, .inputGroup textarea {
+    width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #e2e8f0; outline: none; background: #f8fafc;
+}
+
+.modalActions { display: flex; gap: 10px; margin-top: 25px; }
+.saveBtn { flex: 2; background: #2563eb; color: white; border: none; padding: 12px; border-radius: 10px; cursor: pointer; font-weight: 700; }
+.cancelBtn { flex: 1; background: #f1f5f9; color: #475569; border: none; padding: 12px; border-radius: 10px; cursor: pointer; }
+.confirmDeleteBtn { flex: 2; background: #ef4444; color: white; border: none; border-radius: 10px; font-weight: 700; cursor: pointer; }
+
+.viewDetails { display: flex; flex-direction: column; gap: 12px; text-align: right; }
+.detailItem { background: #f8fafc; padding: 12px; border-radius: 10px; border-right: 4px solid #2563eb; }
+.featuresList { list-style: none; padding: 0; margin-top: 8px; }
+.featuresList li { font-size: 13px; color: #64748b; margin-bottom: 5px; display: flex; align-items: center; gap: 8px; }
+.featuresList li i { color: #10b981; }
+
+.warningIcon { font-size: 50px; color: #ef4444; text-align: center; margin-bottom: 15px; }
+.confirmModal { text-align: center; }

@@ -1,0 +1,81 @@
+.tableContainer {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.mainTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: right;
+}
+
+.mainTable th {
+    background: #f1f5f9;
+    padding: 16px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #475569;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.mainTable td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+    color: #334155;
+}
+
+.idCell { font-weight: 600; color: #2563eb; }
+.amountCell { font-weight: 700; color: #0f172a; }
+
+.noResults {
+    text-align: center;
+    padding: 40px;
+    color: #64748b;
+}
+
+.loadingState {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 40px;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid #e2e8f0;
+    border-top: 3px solid #2563eb;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.loadMoreWrapper {
+    padding: 24px;
+    text-align: center;
+    background: #f8fafc;
+}
+
+.loadMoreBtn {
+    background: white;
+    border: 1.5px solid #2563eb;
+    color: #2563eb;
+    padding: 10px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.loadMoreBtn:hover {
+    background: #2563eb;
+    color: white;
+}

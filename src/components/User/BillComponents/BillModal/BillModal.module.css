@@ -1,0 +1,30 @@
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+.modalContent {
+    background: white;
+    width: 90%;
+    max-width: 480px;
+    border-radius: 20px;
+    padding: 25px;
+    animation: zoomIn 0.2s ease-out;
+}
+@keyframes zoomIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.modalHeader { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 15px; margin-bottom: 20px; }
+.closeModal { background: none; border: none; font-size: 24px; cursor: pointer; color: #94a3b8; }
+.inputGroup { margin-bottom: 15px; text-align: right; }
+.inputGroup label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: #475569; }
+.inputGroup input { width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 10px; outline: none; background: #f8fafc; }
+.modalActions { display: flex; gap: 10px; margin-top: 25px; }
+.saveBtn { flex: 1; padding: 12px; border-radius: 10px; border: none; color: white; font-weight: 700; cursor: pointer; background: #2563eb; }
+.confirmDeleteBtn { flex: 1; padding: 12px; border-radius: 10px; border: none; color: white; font-weight: 700; cursor: pointer; background: #ef4444; }
+.cancelBtn { flex: 1; background: #f1f5f9; color: #475569; border: none; border-radius: 10px; cursor: pointer; }
+.warningIcon { color: #ef4444; font-size: 50px; text-align: center; margin-bottom: 15px; }
+.confirmModal { text-align: center; }

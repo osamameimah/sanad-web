@@ -1,0 +1,16 @@
+ .container { max-width: 1200px; margin: 0 auto; direction: rtl; }
+.headerSection { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; padding: 10px 0; border-bottom: 1px solid #eee; }
+.profileCard { display: flex; align-items: center; gap: 20px; }
+.profileAvatar { width: 70px; height: 70px; background: linear-gradient(135deg, #4f46e5, #818cf8); border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 800; color: white; box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3); }
+.profileInfo h1 { font-size: 24px; margin: 0; color: #1e293b; }
+.profileInfo p { color: #64748b; margin: 5px 0 0; font-size: 14px; }
+.btnCancel { background: #fff; border: 1px solid #ef4444; color: #ef4444; padding: 10px 24px; border-radius: 12px; cursor: pointer; font-weight: 700; font-size: 14px; transition: 0.3s; }
+.btnCancel:hover { background: #ef4444; color: #fff; }
+.statsGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 20px; }
+
+.toast { position: fixed; top: 20px; left: 20px; padding: 15px 25px; border-radius: 12px; color: white; font-weight: 600; display: flex; align-items: center; gap: 12px; z-index: 2000; box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); animation: slideIn 0.4s ease-out; }
+@keyframes slideIn { from { transform: translateX(-100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+.success { background: #10b981; }
+.error { background: #ef4444; }
+
+@media (max-width: 768px) { .headerSection { flex-direction: column; gap: 15px; text-align: center; } .profileCard { flex-direction: column; } }

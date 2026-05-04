@@ -1,0 +1,6 @@
+.modalOverlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); display: flex; justify-content: center; align-items: center; z-index: 1000; }
+.modalContent { background: white; padding: 40px; border-radius: 24px; width: 90%; max-width: 450px; text-align: center; }
+.confirmIcon { font-size: 50px; color: #f59e0b; margin-bottom: 20px; }
+.confirmActions { display: flex; gap: 15px; margin-top: 30px; }
+.btnConfirmYes { flex: 1; padding: 12px; background: #ef4444; color: white; border: none; border-radius: 10px; font-weight: 700; cursor: pointer; }
+.btnConfirmNo { flex: 1; padding: 12px; background: #f1f5f9; color: #475569; border: none; border-radius: 10px; font-weight: 700; cursor: pointer; }

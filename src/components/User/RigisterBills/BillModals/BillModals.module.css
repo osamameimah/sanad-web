@@ -1,0 +1,88 @@
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.modalContent {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+    animation: zoomIn 0.2s ease-out;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.closeModal { background: none; border: none; font-size: 24px; cursor: pointer; color: #94a3b8; }
+
+.editForm .inputGroup {
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+.inputGroup label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #475569;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    outline: none;
+}
+
+.confirmModal { text-align: center; direction: rtl; }
+.warningIcon { font-size: 50px; color: #f59e0b; margin-bottom: 15px; }
+
+.modalActions {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.saveBtn, .confirmDeleteBtn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.saveBtn { background: #2563eb; }
+.confirmDeleteBtn { background: #ef4444; }
+.cancelBtn {
+    flex: 1;
+    background: #f1f5f9;
+    color: #475569;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,316 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal {
+  background: linear-gradient(145deg, #0f0f1e, #1a1a2e);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 22px;
+  width: 100%;
+  max-width: 560px;
+  max-height: 94vh;
+  overflow-y: auto;
+  padding: 2rem;
+  position: relative;
+  box-shadow: var(--shadow-lg), 0 0 60px rgba(212, 175, 55, 0.1);
+  animation: slideIn 0.35s ease;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.headerIcon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.headerTitle {
+  color: var(--gold-primary);
+  font-weight: 900;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.headerSubtitle {
+  color: #777;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: block;
+  color: #ccc;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.inputIcon {
+  position: absolute;
+  right: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+}
+
+.input {
+  width: 100%;
+  padding: 11px 38px 11px 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.9rem;
+   outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.input:focus {
+  border-color: rgba(212, 175, 55, 0.7);
+}
+
+.inputError {
+  border-color: var(--danger);
+}
+
+.errorText {
+  color: var(--danger);
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.planSelector {
+  margin-bottom: 1rem;
+}
+
+.planOption {
+  padding: 13px 15px;
+  margin-bottom: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.02);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.planOption:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.planSelected {
+  border-color: var(--gold-primary);
+  background: rgba(212, 175, 55, 0.08);
+}
+
+.planInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.planIcon {
+  font-size: 1.5rem;
+}
+
+.planName {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.planSubtitle {
+  color: #777;
+  font-size: 0.75rem;
+}
+
+.planPrice {
+  font-weight: 900;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.textarea {
+  width: 100%;
+  padding: 11px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.9rem;
+   outline: none;
+  resize: vertical;
+  transition: border-color 0.2s ease;
+}
+
+.textarea:focus {
+  border-color: rgba(212, 175, 55, 0.7);
+}
+
+.submitButton {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+  border: none;
+  border-radius: 12px;
+  color: var(--bg-darker);
+  font-weight: 900;
+  font-size: 1rem;
+   cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(212, 175, 55, 0.35);
+}
+
+.submitButton:disabled {
+  background: #444;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 3px solid var(--bg-darker);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.successContainer {
+  text-align: center;
+  padding: 1.5rem 0;
+  animation: popIn 0.5s ease;
+}
+
+.successIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.successTitle {
+  color: var(--success);
+  font-weight: 900;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.successText {
+  color: #aaa;
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+.highlight {
+  color: #fff;
+}
+
+.goldHighlight {
+  color: var(--gold-primary);
+}
+
+.blueHighlight {
+  color: var(--info);
+  font-size: 1.2rem;
+}
+
+.planSummary {
+  margin: 1rem auto;
+  display: inline-block;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  padding: 14px 28px;
+}
+
+.planSummaryLabel {
+  color: #888;
+  font-size: 0.75rem;
+}
+
+.planSummaryValue {
+  color: var(--gold-primary);
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.closeSuccessButton {
+  display: block;
+  margin: 1rem auto 0;
+  padding: 12px 36px;
+  background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+  border: none;
+  border-radius: 10px;
+  color: var(--bg-darker);
+  font-weight: 900;
+  font-size: 0.95rem;
+   cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.closeSuccessButton:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 1.5rem;
+  }
+  
+  .planOption {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .planPrice {
+    align-self: flex-end;
+  }
+}

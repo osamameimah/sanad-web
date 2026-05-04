@@ -1,0 +1,14 @@
+ .tableCard { background: white; border-radius: 15px; border: 1px solid #e2e8f0; overflow: hidden; }
+.table { width: 100%; border-collapse: collapse; }
+.table th { background: #f8fafc; padding: 15px; text-align: right; color: #64748b; font-size: 12px; border-bottom: 2px solid #f1f5f9; }
+.table td { padding: 15px; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
+.tag { padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; }
+.basic { background: #f1f5f9; color: #475569; }
+.pro { background: #dbeafe; color: #2563eb; }
+.premium { background: #fef3c7; color: #d97706; }
+.actions { display: flex; gap: 8px; justify-content: center; }
+.actions button { width: 35px; height: 35px; border-radius: 8px; border: 1px solid #e2e8f0; background: white; cursor: pointer; }
+.approveBtn { color: #10b981; }
+.editBtn { color: #3b82f6; }
+.deleteBtn { color: #ef4444; }
+.textCenter { text-align: center !important; }

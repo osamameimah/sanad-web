@@ -1,0 +1,32 @@
+:root {
+  /* الألوان الأساسية */
+  --gold-primary: #D4AF37;
+  --gold-dark: #B8962E;
+  --gold-light: #FDE68A;
+  --bg-dark: #0a0a0f;
+  --bg-darker: #050508;
+  --bg-card: rgba(26, 26, 46, 0.95);
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --text-muted: #666666;
+  
+  /* ألوان الحالات */
+  --success: #34D399;
+  --success-dark: #059669;
+  --info: #60A5FA;
+  --danger: #F87171;
+  --warning: #F59E0B;
+  
+  /* الظلال */
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  --shadow-gold: 0 0 30px rgba(212, 175, 55, 0.15);
+  
+  /* المسافات */
+  --container-padding: clamp(1rem, 5vw, 3rem);
+  --section-spacing: clamp(3rem, 8vw, 6rem);
+  
+  /* الخطوط */
+  --font-primary: 'Tajawal', sans-serif;
+}
