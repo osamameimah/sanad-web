@@ -1,26 +1,29 @@
-.hero {
+ .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
   padding: 90px var(--container-padding) 60px;
+  background-color: #F6F8FB; /* background */
 }
 
 .backgroundGlow {
   position: absolute;
   inset: 0;
+  /* تغيير التوهج ليتناسب مع الألوان الجديدة */
   background: 
-    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(212, 175, 55, 0.08) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 40% at 20% 70%, rgba(96, 165, 250, 0.06) 0%, transparent 60%);
+    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(15, 118, 110, 0.05) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 20% 70%, rgba(22, 163, 74, 0.04) 0%, transparent 60%);
 }
 
 .gridLines {
   position: absolute;
   inset: 0;
+  /* تغيير لون الخطوط الشبكية */
   background-image: 
-    linear-gradient(rgba(212, 175, 55, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(212, 175, 55, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(15, 118, 110, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 118, 110, 0.07) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -40,25 +43,24 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(212, 175, 55, 0.1);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  background: rgba(15, 118, 110, 0.08); /* Primary semi-transparent */
+  border: 1px solid rgba(15, 118, 110, 0.15);
   border-radius: 30px;
   padding: 5px 14px;
   margin-bottom: 1.5rem;
-  animation: shimmer 3s infinite;
 }
 
 .badgeDot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #34D399;
+  background: #16A34A; /* success */
   display: inline-block;
   animation: blink 2s infinite;
 }
 
 .badgeText {
-  color: var(--gold-primary);
+  color: #0F766E; /* primary */
   font-size: 0.8rem;
   font-weight: 700;
 }
@@ -68,26 +70,27 @@
   font-weight: 900;
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: white;
+  color: #16213A; /* text */
 }
 
 .highlight {
-  background: linear-gradient(135deg, var(--gold-primary), var(--gold-light), var(--gold-dark));
+  /* التدرج اللوني الجديد */
+  background: linear-gradient(135deg, #0F766E, #115E59, #16A34A);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .description {
-  color: var(--text-secondary);
-  font-size: 1rem;
+  color: #64748B; /* mutedText */
+  font-size: 1.1rem;
   line-height: 1.85;
   margin-bottom: 2rem;
   max-width: 460px;
 }
 
 .description strong {
-  color: var(--gold-primary);
+  color: #0F766E; /* primary */
 }
 
 .buttonGroup {
@@ -97,85 +100,113 @@
 }
 
 .primaryButton {
-  padding: 14px 30px;
-  background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #0F766E, #115E59);
   border: none;
   border-radius: 12px;
-  color: var(--bg-darker);
-  font-weight: 900;
-  font-size: 0.95rem;
-   cursor: pointer;
-  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
-  transition: transform 0.2s ease;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(15, 118, 110, 0.25);
+  transition: all 0.3s ease;
 }
 
 .primaryButton:hover {
   transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(15, 118, 110, 0.35);
 }
 
 .secondaryButton {
   padding: 14px 30px;
-  background: transparent;
-  border: 1px solid rgba(212, 175, 55, 0.4);
+  background: #FFFFFF; /* surfaceStrong */
+  border: 1px solid rgba(15, 118, 110, 0.2);
   border-radius: 12px;
-  color: var(--gold-primary);
+  color: #16213A; /* text */
   font-weight: 700;
   font-size: 0.95rem;
-   cursor: pointer;
-  transition: background 0.2s ease;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .secondaryButton:hover {
-  background: rgba(212, 175, 55, 0.1);
+  background: #F6F8FB;
+  border-color: #0F766E;
+  color: #0F766E;
 }
 
 .stats {
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
+  padding-top: 1rem;
 }
 
 .statItem {
-  text-align: center;
+  text-align: right; /* بما أن اللغة عربية */
 }
 
 .statValue {
-  color: var(--gold-primary);
+  color: #0F766E; /* primary */
   font-weight: 900;
-  font-size: clamp(1.5rem, 3vw, 1.75rem);
+  font-size: clamp(1.5rem, 3vw, 1.8rem);
+  margin-bottom: 4px;
 }
 
 .statLabel {
-  color: #666;
-  font-size: 0.8rem;
+  color: #64748B; /* mutedText */
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 .previewWrapper {
   position: relative;
+  /* إضافة ظل ناعم لخلفية المعاينة لتبرز في الوضع الفاتح */
+  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.08));
 }
 
 .previewBadge {
   position: absolute;
   top: -14px;
   left: -14px;
-  background: linear-gradient(135deg, #34D399, #059669);
+  background: linear-gradient(135deg, #16A34A, #115E59);
   border-radius: 10px;
-  padding: 7px 13px;
+  padding: 8px 15px;
   font-size: 0.75rem;
   font-weight: 700;
   color: #fff;
-  box-shadow: 0 8px 20px rgba(52, 211, 153, 0.3);
+  box-shadow: 0 8px 20px rgba(22, 163, 74, 0.2);
   white-space: nowrap;
+  z-index: 2;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
 }
 
 @media (max-width: 968px) {
   .content {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 4rem;
+    text-align: center;
   }
   
+  .description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .buttonGroup {
+    justify-content: center;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+
   .previewWrapper {
-    max-width: 500px;
+    max-width: 550px;
     margin: 0 auto;
   }
 }
@@ -190,10 +221,6 @@
   }
   
   .stats {
-    justify-content: space-around;
+    gap: 1.5rem;
   }
 }
-
-
-
-

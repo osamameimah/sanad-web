@@ -4,9 +4,9 @@
 .fullSearchWrapper { position: relative; flex: 1; display: flex; align-items: center; }
 .searchIcon { position: absolute; right: 15px; color: #64748b; z-index: 1; }
 .fullSearchInput { width: 100%; padding: 12px 45px 12px 15px; font-size: 14px; border: 1px solid #cbd5e1; border-radius: 10px; outline: none; background-color: #f8fafc; transition: 0.3s; }
-.fullSearchInput:focus { border-color: #2563eb; background: white; box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1); }
-.fullAddBtn { background: #2563eb; color: white; border: none; padding: 12px 20px; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 10px; white-space: nowrap; transition: 0.3s; width: fit-content; }
-.fullAddBtn:hover { background: #1d4ed8; transform: translateY(-2px); }
+.fullSearchInput:focus { border-color: #106862; background: white; box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1); }
+.fullAddBtn { background: #106862; color: white; border: none; padding: 12px 20px; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 10px; white-space: nowrap; transition: 0.3s; width: fit-content; }
+.fullAddBtn:hover { background: #106862; transform: translateY(-2px); }
 .clearSearch { position: absolute; left: 15px; background: none; border: none; cursor: pointer; color: #94a3b8; }
 .toast { position: fixed; top: 20px; left: 20px; padding: 15px 25px; border-radius: 12px; color: white; font-weight: 600; display: flex; align-items: center; gap: 12px; z-index: 2000; box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); animation: slideInRight 0.4s ease-out; }
 @keyframes slideInRight { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }

@@ -1,3 +1,4 @@
+ import React from 'react';
 import { CONTACTS } from '../../../data/index';
 import styles from './Contact.module.css';
 
@@ -11,7 +12,8 @@ export function Contact() {
             <div key={label} className={styles.card}>
               <div className={styles.icon}>{icon}</div>
               <div className={styles.label}>{label}</div>
-              <div className={styles.value} style={{ color }}>{value}</div>
+              {/* استخدمنا اللون الممرر من البيانات فقط كـ "توهج" أو لون نص إذا كان مناسباً للقراءة */}
+              <div className={styles.value} style={{ color: color }}>{value}</div>
             </div>
           ))}
         </div>

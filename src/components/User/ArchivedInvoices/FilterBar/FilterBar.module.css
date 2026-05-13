@@ -35,7 +35,7 @@
 
 .filterItem select:focus, 
 .filterItem input:focus {
-    border-color: #2563eb;
+    border-color: #106862;
     background-color: white;
     box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
 }

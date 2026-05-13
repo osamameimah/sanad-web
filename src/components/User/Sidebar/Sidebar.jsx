@@ -9,7 +9,8 @@ import {
     Menu,
     Archive,
     Receipt,
-    FilePlus
+    FilePlus,
+    FileCheck
 } from 'lucide-react';
 import styles from './Sidebar.module.css';
 
@@ -41,7 +42,7 @@ const Sidebar = () => {
 
             <aside className={`${styles.sidebar} ${open ? styles.open : ''}`}>
                 <div className={styles.sidebarHeader}>
-                    <img src="/Logo.svg" alt="Logo" className={styles.adminLogo} />
+                    <img src="/logo.jpeg" alt="Logo" className={styles.adminLogo} />
                     <h2 className={styles.adminTitle}>سند</h2>
                 </div>
 
@@ -51,25 +52,24 @@ const Sidebar = () => {
                         <span className={styles.linkText}>الرئيسية</span>
                     </NavLink>
 
-                    <NavLink to="registerBills" className={({ isActive }) => isActive ? styles.active : ''}>
+                    {/* <NavLink to="registerBills" className={({ isActive }) => isActive ? styles.active : ''}>
                         <Receipt className={styles.icon} size={20} />
                         <span className={styles.linkText}>سجل الفواتير اليومية</span>
+                    </NavLink> */}
+                    <NavLink to="addBills" className={({ isActive }) => isActive ? styles.active : ''}>
+                        <FilePlus className={styles.icon} size={20} />
+                        <span className={styles.linkText}>إضافة فاتورة</span>
                     </NavLink>
-   <NavLink to="addBills" className={({ isActive }) => isActive ? styles.active : ''}>
-    <FilePlus className={styles.icon} size={20} />
-    <span className={styles.linkText}>إضافة فاتورة</span>
-</NavLink>
+
+                    <NavLink to="validation" className={({ isActive }) => isActive ? styles.active : ''}>
+                        <FileCheck className={styles.icon} size={20} />
+                        <span className={styles.linkText}>المقارنات و التحقق</span>
+                    </NavLink>
 
                     <NavLink to="archivedInvoices" className={({ isActive }) => isActive ? styles.active : ''}>
                         <Archive className={styles.icon} size={20} />
                         <span className={styles.linkText}>كافة الفواتير المؤرشفة</span>
                     </NavLink>
-
-
-                    {/* <NavLink to="validation" className={({ isActive }) => isActive ? styles.active : ''}>
-                            <UserPlus className={styles.icon} size={20} />
-                            <span className={styles.linkText}>المقارنات و التحقق</span>
-                        </NavLink> */}
 
                     {/* <NavLink to="whatsappBoot" className={({ isActive }) => isActive ? styles.active : ''}>
                         <Users className={styles.icon} size={20} />

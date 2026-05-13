@@ -1,166 +1,152 @@
-.container {
-  background: linear-gradient(135deg, rgba(26, 26, 46, 0.95), rgba(15, 15, 26, 0.98));
-  border: 1px solid rgba(212, 175, 55, 0.2);
+ .container {
+  background: #FFFFFF;
   border-radius: 20px;
-  padding: clamp(1rem, 3vw, 1.5rem);
-  box-shadow: var(--shadow-lg), 0 0 60px rgba(212, 175, 55, 0.1);
-  animation: float 6s ease-in-out infinite alternate;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
+  padding: 1.5rem;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
 }
 
 .windowDots {
   display: flex;
-  gap: 7px;
-  margin-bottom: 1rem;
+  gap: 6px;
+  margin-bottom: 1.5rem;
+  align-items: center;
 }
 
 .dot {
-  width: 11px;
-  height: 11px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
 }
 
-.dotRed { background: #ef4444; }
-.dotYellow { background: #f59e0b; }
-.dotGreen { background: #10b981; }
+.dotRed { background: #FF5F56; }
+.dotYellow { background: #FFBD2E; }
+.dotGreen { background: #27C93F; }
 
 .windowBar {
-  flex: 1;
-  height: 6px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 3px;
-  align-self: center;
-  margin-right: 8px;
+  height: 4px;
+  width: 100px;
+  background: #F1F5F9;
+  margin-right: 12px;
+  border-radius: 10px;
 }
 
+/* شبكة الإحصائيات المصغرة */
 .statsGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .statTile {
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: 10px;
-  padding: 10px 12px;
-  border-right-width: 3px;
-  border-right-style: solid;
+  background: #F8FAFC;
+  padding: 12px;
+  border-radius: 12px;
+  border-right: 4px solid transparent; /* سيتم تلوينها برمجياً */
 }
 
 .statLabel {
-  color: #888;
   font-size: 0.7rem;
+  color: #64748B;
+  font-weight: 700;
   margin-bottom: 4px;
 }
 
 .statValue {
+  font-size: 1rem;
   font-weight: 900;
-  font-size: clamp(1.2rem, 3vw, 1.4rem);
 }
 
+/* صفوف الجدول */
 .tableRow {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 9px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-  gap: 8px;
+  justify-content: space-between;
+  padding: 12px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #F1F5F9;
+  transition: background 0.2s ease;
+}
+
+.tableRow:hover {
+  background: #F8FAFC;
 }
 
 .userInfo {
   display: flex;
   align-items: center;
-  gap: 9px;
-  min-width: 0;
-  flex: 2;
+  gap: 10px;
+  flex: 1;
 }
 
 .avatar {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #D4AF37, #B8962E);
+  width: 32px;
+  height: 32px;
+  background: #E2E8F0;
+  color: #475569;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #0f0f1a;
-  flex-shrink: 0;
+  font-weight: 900;
+  font-size: 0.8rem;
 }
 
 .userName {
-  color: #ddd;
-  font-size: 0.8rem;
-  font-weight: 600;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1E293B;
 }
 
 .amount {
-  color: #999;
-  font-size: 0.75rem;
-  white-space: nowrap;
-  flex: 1;
-  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0 15px;
 }
 
 .status {
   font-size: 0.7rem;
-  font-weight: 700;
-  padding: 3px 10px;
+  font-weight: 800;
+  padding: 4px 10px;
   border-radius: 20px;
-  white-space: nowrap;
-  flex-shrink: 0;
+  min-width: 65px;
+  text-align: center;
 }
 
+/* رسالة النجاح المنبثقة */
 .successMessage {
-  margin-top: 0.75rem;
-  background: rgba(52, 211, 153, 0.1);
-  border: 1px solid rgba(52, 211, 153, 0.3);
-  border-radius: 9px;
-  padding: 9px 13px;
+  margin-top: 1.5rem;
+  background: #ECFDF5;
+  border: 1px solid #10B981;
+  padding: 12px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
-  gap: 8px;
-}
-
-.messageContent {
-  flex: 1;
-  min-width: 0;
+  gap: 12px;
+  animation: slideUp 0.5s ease-out;
 }
 
 .messageTitle {
-  color: #34D399;
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: 0.85rem;
+  font-weight: 900;
+  color: #065F46;
 }
 
 .messageDesc {
-  color: #888;
-  font-size: 0.7rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 0.75rem;
+  color: #047857;
+  opacity: 0.9;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 @media (max-width: 480px) {
-  .tableRow {
-    flex-wrap: wrap;
-    gap: 5px;
-  }
-  
-  .userInfo {
-    flex: 100%;
-    margin-bottom: 5px;
-  }
-  
-  .amount {
-    text-align: right;
-    flex: 1;
-  }
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
 }

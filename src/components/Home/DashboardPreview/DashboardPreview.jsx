@@ -1,16 +1,17 @@
+ import React from 'react';
 import styles from './DashboardPreview.module.css';
 
 const ROWS = [
-  { name: 'محمد أحمد', amt: '150', status: 'مدفوعة', color: '#34D399' },
-  { name: 'فاطمة علي', amt: '85', status: 'مدفوعة', color: '#34D399' },
-  { name: 'أحمد سالم', amt: '732', status: 'معلقة', color: '#F87171' },
+  { name: 'محمد أحمد', amt: '150', status: 'مدفوعة', color: '#10B981' },
+  { name: 'فاطمة علي', amt: '85', status: 'مدفوعة', color: '#10B981' },
+  { name: 'أحمد سالم', amt: '732', status: 'معلقة', color: '#EF4444' },
 ];
 
 const MINI_STATS = [
-  { label: 'التحصيل', value: '87.5%', color: '#D4AF37' },
-  { label: 'الفواتير', value: '124', color: '#60A5FA' },
-  { label: 'مطابقة', value: '118', color: '#34D399' },
-  { label: 'معلقة', value: '6', color: '#F87171' },
+  { label: 'التحصيل', value: '87.5%', color: '#0F766E' }, // اللون الرئيسي الجديد
+  { label: 'الفواتير', value: '124', color: '#3B82F6' },
+  { label: 'مطابقة', value: '118', color: '#10B981' },
+  { label: 'معلقة', value: '6', color: '#EF4444' },
 ];
 
 export default function DashboardPreview() {
@@ -36,28 +37,30 @@ export default function DashboardPreview() {
         ))}
       </div>
 
-      {ROWS.map(({ name, amt, status, color }) => (
-        <div key={name} className={styles.tableRow}>
-          <div className={styles.userInfo}>
-            <div className={styles.avatar}>{name[0]}</div>
-            <span className={styles.userName}>{name}</span>
+      <div className={styles.table}>
+        {ROWS.map(({ name, amt, status, color }) => (
+          <div key={name} className={styles.tableRow}>
+            <div className={styles.userInfo}>
+              <div className={styles.avatar}>{name[0]}</div>
+              <span className={styles.userName}>{name}</span>
+            </div>
+            <span className={styles.amount}>{amt} شيكل</span>
+            <span 
+              className={styles.status}
+              style={{ background: `${color}15`, color }} // خلفية شفافة جداً
+            >
+              {status}
+            </span>
           </div>
-          <span className={styles.amount}>{amt} شيكل</span>
-          <span 
-            className={styles.status}
-            style={{ background: `${color}22`, color }}
-          >
-            {status}
-          </span>
-        </div>
-      ))}
+        ))}
+      </div>
 
       <div className={styles.successMessage}>
-        <span>🤖</span>
+        <span style={{ fontSize: '1.2rem' }}>🤖</span>
         <div className={styles.messageContent}>
           <div className={styles.messageTitle}>تم التحقق بنجاح ✅</div>
           <div className={styles.messageDesc}>
-            حوالة محمد أحمد – 150 شيكل
+            حوالة محمد أحمد – 150 شيكل تمت مطابقتها آلياً
           </div>
         </div>
       </div>

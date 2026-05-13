@@ -4,7 +4,7 @@
 .table td { padding: 5px; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
 .index { font-weight: bold; color: #94a3b8; }
 .pkgName { font-weight: 600; color: #1e293b; }
-.priceCell { font-weight: 800; color: #2563eb; }
+.priceCell { font-weight: 800; color: #106862; }
 .actions { display: flex; gap: 8px; justify-content: center; }
 .actions button { width: 35px; height: 35px; border-radius: 8px; border: 1px solid #e2e8f0; background: white; cursor: pointer; transition: 0.2s; }
 .editBtn { color: #3b82f6; }

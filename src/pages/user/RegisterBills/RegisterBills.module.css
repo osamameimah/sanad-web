@@ -39,7 +39,7 @@
 }
 
 .fullSearchInput:focus {
-    border-color: #2563eb;
+    border-color: #106862;
     box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
 }
 
@@ -63,7 +63,7 @@
 }
 
 .loadMoreBtn {
-    background: #2563eb;
+    background: #106862;
     color: white;
     border: none;
     padding: 12px 40px;

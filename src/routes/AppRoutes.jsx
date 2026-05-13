@@ -9,7 +9,7 @@ import WhatsappBoot from "../pages/admin/WhatsappBoot/WhatsappBoot";
 // import Login from "../pages/login/Login";
 import UserHome from "../pages/user/UserHome/UserHome";
 import Sidebar from "../components/User/Sidebar/Sidebar";
-// import UserVerify from "../pages/user/UserVerify/UserVerify";
+import UserVerify from "../pages/user/UserVerify/UserVerify";
 import RegisterBills from "../pages/user/RegisterBills/RegisterBills";
 import AddBills from "../pages/user/AddBills/AddBills";
 import Home from "../pages/home/Home";
@@ -26,13 +26,13 @@ const AppRoutes = () => {
                 <Route path="whatsappBoot" element={<WhatsappBoot />} />
             </Route>
  
-            <Route path="/user" element={<Sidebar />} >
+            {/* <Route path="/user" element={<Sidebar />} >
                 <Route path="home" element={<UserHome />} />
                 <Route path="registerBills" element={<RegisterBills />} />
                 <Route path="archivedInvoices" element={<ArchivedInvoices/>}/>
                 <Route path="addBills" element={<AddBills />} />
-                {/* <Route path="validation" element={<UserVerify />} /> */}
-            </Route>
+                <Route path="validation" element={<UserVerify />} />
+            </Route> */}
 
         </Routes>
     );

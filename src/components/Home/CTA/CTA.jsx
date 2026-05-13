@@ -1,3 +1,4 @@
+ import React from 'react';
 import styles from './CTA.module.css';
 
 export default function CTA({ onSubscribe }) {
@@ -9,10 +10,11 @@ export default function CTA({ onSubscribe }) {
           <span className={styles.highlight}>اليوم</span>
         </h2>
         <p className={styles.description}>
-          انضم إلى أكثر من 50 شركة تستخدم سند لأتمتة عملياتها المالية وتوفير الوقت والجهد.
+          انضم إلى أكثر من 50 شركة تستخدم سند لأتمتة عملياتها المالية وتوفير الوقت والجهد. كن جزءاً من مستقبل الإدارة المالية الذكية.
         </p>
-        <button onClick={() => onSubscribe()} className={styles.button}>
-          🚀 ابدأ الآن  
+        {/* onClick={() => onSubscribe()} */}
+        <button  className={styles.button}>
+          🚀 ابدأ رحلتك الآن  
         </button>
       </div>
     </section>

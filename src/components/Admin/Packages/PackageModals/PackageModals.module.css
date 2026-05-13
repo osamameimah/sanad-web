@@ -15,12 +15,12 @@
 }
 
 .modalActions { display: flex; gap: 10px; margin-top: 25px; }
-.saveBtn { flex: 2; background: #2563eb; color: white; border: none; padding: 12px; border-radius: 10px; cursor: pointer; font-weight: 700; }
+.saveBtn { flex: 2; background: #106862; color: white; border: none; padding: 12px; border-radius: 10px; cursor: pointer; font-weight: 700; }
 .cancelBtn { flex: 1; background: #f1f5f9; color: #475569; border: none; padding: 12px; border-radius: 10px; cursor: pointer; }
 .confirmDeleteBtn { flex: 2; background: #ef4444; color: white; border: none; border-radius: 10px; font-weight: 700; cursor: pointer; }
 
 .viewDetails { display: flex; flex-direction: column; gap: 12px; text-align: right; }
-.detailItem { background: #f8fafc; padding: 12px; border-radius: 10px; border-right: 4px solid #2563eb; }
+.detailItem { background: #f8fafc; padding: 12px; border-radius: 10px; border-right: 4px solid #106862; }
 .featuresList { list-style: none; padding: 0; margin-top: 8px; }
 .featuresList li { font-size: 13px; color: #64748b; margin-bottom: 5px; display: flex; align-items: center; gap: 8px; }
 .featuresList li i { color: #10b981; }

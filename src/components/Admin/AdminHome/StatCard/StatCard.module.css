@@ -85,20 +85,20 @@
 }
 
 /* Gradients */
-.blueCard .iconBg { background-color: #3b82f6; }
-.blueCard .statIcon { color: #2563eb; }
-.blueCard .cardDecorator { color: #3b82f6; }
+.blueCard .iconBg { background-color: #4e7ecc; }
+.blueCard .statIcon { color: #4e7ecc; }
+.blueCard .cardDecorator { color: #4e7ecc; }
 
-.yellowCard .iconBg { background-color: #f59e0b; }
-.yellowCard .statIcon { color: #d97706; }
-.yellowCard .cardDecorator { color: #f59e0b; }
+.yellowCard .iconBg { background-color: #d6a043; }
+.yellowCard .statIcon { color: #d6a043; }
+.yellowCard .cardDecorator { color: #d6a043; }
 
 .greenCard .iconBg { background-color: #10b981; }
 .greenCard .statIcon { color: #059669; }
 .greenCard .cardDecorator { color: #10b981; }
 
 .redCard .iconBg { background-color: #ef4444; }
-.redCard .statIcon { color: #dc2626; }
+.redCard .statIcon { color: #ef4444; }
 .redCard .cardDecorator { color: #ef4444; }
 
 @media (max-width: 480px) {

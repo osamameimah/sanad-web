@@ -1,10 +1,10 @@
 :root {
   /* الألوان الأساسية */
-  --gold-primary: #D4AF37;
-  --gold-dark: #B8962E;
+  --gold-primary: #116962;
+  --gold-dark: #116962;
   --gold-light: #FDE68A;
   --bg-dark: #0a0a0f;
-  --bg-darker: #050508;
+  /* --bg-darker: #050508; */
   --bg-card: rgba(26, 26, 46, 0.95);
   --text-primary: #ffffff;
   --text-secondary: #9ca3af;

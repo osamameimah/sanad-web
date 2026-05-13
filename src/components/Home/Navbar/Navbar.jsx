@@ -45,11 +45,11 @@ export default function Navbar() {
       <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
         {/* الشعار */}
         <div className={styles.logoContainer}>
-          <img src="/logo.svg" alt="Sanad Logo" className={styles.logo} />
-          <div>
+          <img src="/logo2.jpg" alt="Sanad Logo" className={styles.logo} />
+          {/* <div>
             <div className={styles.logoText}>سند</div>
             <div className={styles.logoSubtext}>SANAD</div>
-          </div>
+          </div> */}
         </div>
 
         {/* زر القائمة للموبايل */}
@@ -81,23 +81,23 @@ export default function Navbar() {
             >
               تسجيل الدخول
             </button>
-            <button 
+            {/* <button 
               onClick={openSubscription} 
               className={styles.ctaButton}
             >
               اشترك الآن
-            </button>
+            </button> */}
           </div>
         </div>
 
         {/* أزرار الأكشن لنسخة الديسكتوب */}
         <div className={styles.desktopActions}>
           <button onClick={() => setShowLogin(true)} className={styles.loginBtn}>
-            تسجيل الدخول
+            تسجيل دخول الأدمن
           </button>
-          <button onClick={() => setShowSubscription(true)} className={styles.ctaButton}>
+          {/* <button onClick={() => setShowSubscription(true)} className={styles.ctaButton}>
             اشترك الآن
-          </button>
+          </button> */}
         </div>
       </nav>
 

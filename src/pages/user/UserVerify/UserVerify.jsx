@@ -51,7 +51,7 @@ const [invoices, setInvoices] = useState([
 
       {/* قسم الإحصائيات */}
       <div className={styles.statsGrid}>
-        {/* <div className={styles.statCard}>
+        <div className={styles.statCard}>
           <div className={`${styles.statIcon} ${styles.blue}`}>
             <i className="fas fa-file-invoice-dollar"></i>
           </div>
@@ -59,9 +59,9 @@ const [invoices, setInvoices] = useState([
             <div className={styles.statValue}>{stats.totalRequired} ₪</div>
             <div className={styles.statLabel}>إجمالي الفواتير الصادرة</div>
           </div>
-        </div> */}
+        </div>
 
-        {/* <div className={styles.statCard}>
+        <div className={styles.statCard}>
           <div className={`${styles.statIcon} ${styles.green}`}>
             <i className="fas fa-hand-holding-usd"></i>
           </div>
@@ -69,9 +69,9 @@ const [invoices, setInvoices] = useState([
             <div className={styles.statValue}>{stats.totalReceived} ₪</div>
             <div className={styles.statLabel}>المبالغ المستلمة (البنك)</div>
           </div>
-        </div> */}
+        </div>
 
-        {/* <div className={styles.statCard}>
+        <div className={styles.statCard}>
           <div className={`${styles.statIcon} ${styles.red}`}>
             <i className="fas fa-exclamation-triangle"></i>
           </div>
@@ -79,7 +79,7 @@ const [invoices, setInvoices] = useState([
             <div className={styles.statValue}>{stats.totalRequired - stats.totalReceived} ₪</div>
             <div className={styles.statLabel}>المبالغ المتبقية</div>
           </div>
-        </div> */}
+        </div>
       </div>
 
       <div className={styles.comparisonContainer}>
@@ -127,7 +127,7 @@ const [invoices, setInvoices] = useState([
       </div>
 
       {/* تقرير المطابقة التلقائي */}
-      {/* <div className={styles.card}>
+      <div className={styles.card}>
         <div className={styles.cardHeader}>
           <span className={styles.cardTitle}>تقرير المطابقة والتحصيل الذكي</span>
         </div>
@@ -182,7 +182,7 @@ const [invoices, setInvoices] = useState([
             </table>
           </div>
         </div>
-      </div> */}
+      </div>
     </>
   );
 };

@@ -1,58 +1,88 @@
 .section {
   padding: var(--section-spacing) var(--container-padding);
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.11) 0%, rgba(96, 165, 250, 0.06) 100%);
-  border-top: 1px solid rgba(212, 175, 55, 0.14);
+  /* خلفية فاتحة ومتميزة لتفصل نهاية الصفحة */
+  background: linear-gradient(135deg, #F0F4F4 0%, #FFFFFF 100%);
+  border-top: 1px solid rgba(15, 118, 110, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* إضافة لمسة فنية خفيفة في الخلفية */
+.section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: rgba(15, 118, 110, 0.03);
+  border-radius: 50%;
+  filter: blur(60px);
 }
 
 .container {
-  max-width: 680px;
+  max-width: 720px; /* توسيع بسيط لراحة النص */
   margin: 0 auto;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .title {
-  font-size: clamp(2rem, 5vw, 2.6rem);
+  font-size: clamp(2rem, 5vw, 2.8rem);
   font-weight: 900;
-  margin-bottom: 1rem;
-  color: white;
+  margin-bottom: 1.2rem;
+  color: #16213A; /* text */
+  line-height: 1.2;
 }
 
 .highlight {
-  background: linear-gradient(135deg, var(--gold-primary), var(--gold-light));
+  /* تدرج الـ Primary الجديد */
+  background: linear-gradient(135deg, #0F766E, #16A34A);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .description {
-  color: var(--text-secondary);
-  font-size: 1rem;
+  color: #64748B; /* mutedText */
+  font-size: 1.1rem;
   line-height: 1.85;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .button {
-  padding: 17px 46px;
+  padding: 18px 50px;
   font-size: 1.1rem;
   font-weight: 900;
-  background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+  /* زر رئيسي بتدرج احترافي */
+  background: linear-gradient(135deg, #0F766E, #115E59);
   border: none;
-  border-radius: 13px;
-  color: var(--bg-darker);
-   cursor: pointer;
-  box-shadow: 0 12px 40px rgba(212, 175, 55, 0.4);
-  animation: pulse-gold 2.5s infinite;
-  transition: transform 0.2s ease;
+  border-radius: 14px;
+  color: #FFFFFF;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(15, 118, 110, 0.25);
+  transition: all 0.3s ease;
+  /* أنيميشن نبض هادئ */
+  animation: pulse-primary 3s infinite;
 }
 
 .button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(15, 118, 110, 0.35);
+  filter: brightness(1.1);
+}
+
+@keyframes pulse-primary {
+  0% { box-shadow: 0 0 0 0 rgba(15, 118, 110, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(15, 118, 110, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(15, 118, 110, 0); }
 }
 
 @media (max-width: 480px) {
   .button {
     width: 100%;
-    padding: 15px 30px;
-    font-size: 1rem;
+    padding: 16px 30px;
+    font-size: 1.05rem;
   }
 }

@@ -38,7 +38,7 @@ const Sidebar = () => {
 
             <aside className={`${styles.sidebar} ${open ? styles.open : ''}`}>
                 <div className={styles.sidebarHeader}>
-                    <img src="/Logo.svg" alt="Logo" className={styles.adminLogo} />
+                    <img src="/logo.jpeg" alt="Logo" className={styles.adminLogo} />
                     <h2 className={styles.adminTitle}>سند</h2>
                 </div>
 

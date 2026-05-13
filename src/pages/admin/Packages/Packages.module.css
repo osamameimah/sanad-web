@@ -34,13 +34,13 @@
 
  
 .fullSearchInput:focus {
-    border-color: #2563eb;
+    border-color: #106862;
     background: white;
     box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
 }
 
 .fullAddBtn {
-    background: #2563eb;
+    background: #106862;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -58,7 +58,7 @@
 }
 
 .fullAddBtn:hover {
-    background: #1d4ed8;
+    background: #106862;
     transform: translateY(-2px);
 }
 
@@ -126,7 +126,7 @@
 .inputGroup input { width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 10px; outline: none; background: #f8fafc; }
 
 .modalActions { display: flex; gap: 10px; margin-top: 25px; }
-.saveBtn, .confirmDeleteBtn { flex: 1; padding: 12px; border-radius: 10px; border: none; color: white; font-weight: 700; cursor: pointer; background: #2563eb; }
+.saveBtn, .confirmDeleteBtn { flex: 1; padding: 12px; border-radius: 10px; border: none; color: white; font-weight: 700; cursor: pointer; background: #106862; }
 .confirmDeleteBtn { background: #ef4444; }
 .cancelBtn { flex: 1; background: #f1f5f9; color: #475569; border: none; border-radius: 10px; cursor: pointer; }
 
@@ -134,7 +134,7 @@
 .tableCard { background: white; border-radius: 15px; border: 1px solid #e2e8f0; margin-top: 20px; overflow: hidden; }
 .table { width: 100%; border-collapse: collapse; text-align: center; }
 .table th { background: #f8fafc; padding: 15px; font-size: 12px; color: #64748b; border-bottom: 2px solid #f1f5f9; }
- .priceCell { font-weight: 800; color: #2563eb; }
+ .priceCell { font-weight: 800; color: #106862; }
 .actions { display: flex; gap: 8px; justify-content: center; }
 .actions button { width: 35px; height: 35px; border-radius: 8px; border: 1px solid #e2e8f0; background: white; cursor: pointer; transition: 0.2s; }
 .editBtn:hover { background: #3b82f6; color: white; }
@@ -187,7 +187,7 @@
 /* تنسيق السعر */
 .priceCell {
     font-weight: 700;
-    color: #2563eb;
+    color: #106862;
 }
 
 
@@ -205,10 +205,7 @@
 
 }
 
-.fullAddBtn {
-    background: #2563eb; color: white; border: none; padding: 12px 20px;
-    border-radius: 10px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 8px;
-}
+ 
 
 /* جداول */
 .tableCard { background: white; border-radius: 15px; border: 1px solid #e2e8f0; overflow: hidden; }
@@ -216,7 +213,7 @@
 .table th { background: #f1f5f9; padding: 15px;  color: #475569; font-size: 13px; }
 .table td { padding: 5px; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
 
-.priceCell { font-weight: 800; color: #2563eb; }
+.priceCell { font-weight: 800; color: #106862; }
 
 /* Tags */
 .tag { padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; }
@@ -232,8 +229,8 @@
 }
 .viewBtn { color: #0ea5e9; }
 .viewBtn:hover { background: #0ea5e9; color: white; }
-.editBtn { color: #2563eb; }
-.editBtn:hover { background: #2563eb; color: white; }
+.editBtn { color: #106862; }
+.editBtn:hover { background: #106862; color: white; }
 .deleteBtn { color: #ef4444; }
 .deleteBtn:hover { background: #ef4444; color: white; }
 
@@ -252,13 +249,13 @@
  }
 
 .modalActions { display: flex; gap: 10px; margin-top: 20px; }
-.saveBtn { flex: 2; background: #2563eb; color: white; border: none; padding: 12px; border-radius: 10px; cursor: pointer; font-weight: 700; }
+.saveBtn { flex: 2; background: #106862; color: white; border: none; padding: 12px; border-radius: 10px; cursor: pointer; font-weight: 700; }
 .cancelBtn { flex: 1; background: #f1f5f9; border: none; padding: 12px; border-radius: 10px; cursor: pointer; }
 .confirmDeleteBtn { flex: 2; background: #ef4444; color: white; border: none; border-radius: 10px; font-weight: 700; cursor: pointer; }
 
 /* تفاصيل العرض */
 .viewDetails { display: flex; flex-direction: column; gap: 12px; }
-.detailItem { background: #f8fafc; padding: 12px; border-radius: 10px; border-right: 4px solid #2563eb; }
+.detailItem { background: #f8fafc; padding: 12px; border-radius: 10px; border-right: 4px solid #106862; }
 .featuresList { list-style: none; padding: 0; margin-top: 8px; }
 .featuresList li { font-size: 13px; color: #64748b; margin-bottom: 5px; display: flex; align-items: center; gap: 8px; }
 .featuresList li i { color: #10b981; }

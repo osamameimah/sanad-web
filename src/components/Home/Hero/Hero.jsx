@@ -1,4 +1,4 @@
-// import Particles from '../../Particles/Particles';
+ import React from 'react';
 import DashboardPreview from '../DashboardPreview/DashboardPreview';
 import styles from './Hero.module.css';
 import StatsBar from '../StatsBar/StatsBar';
@@ -14,8 +14,6 @@ export default function Hero({ onSubscribe }) {
       <div className={styles.backgroundGlow} />
       <div className={styles.gridLines} />
       
-      {/* <Particles /> */}
-
       <div className={styles.content}>
         <div>
           <div className={styles.badge}>
@@ -37,9 +35,9 @@ export default function Hero({ onSubscribe }) {
           </p>
 
           <div className={styles.buttonGroup}>
-            <button onClick={onSubscribe} className={styles.primaryButton}>
+            {/* <button onClick={onSubscribe} className={styles.primaryButton}>
               🚀 إشترك الآن  
-            </button>
+            </button> */}
             <button onClick={() => scrollTo('features')} className={styles.secondaryButton}>
               اكتشف المميزات ↓
             </button>
@@ -47,9 +45,9 @@ export default function Hero({ onSubscribe }) {
 
           <div className={styles.stats}>
             {[
-              { value: '50+', label: 'شركة' },
-              { value: '99.9%', label: 'دقة' },
-              { value: 'أقل من ثانية', label: 'مطابقة' }
+              { value: '50+', label: 'شركة وثقت بنا' },
+              { value: '99.9%', label: 'دقة التنفيذ' },
+              { value: 'ثوانٍ', label: 'سرعة المطابقة' }
             ].map(({ value, label }) => (
               <div key={label} className={styles.statItem}>
                 <div className={styles.statValue}>{value}</div>
@@ -62,13 +60,13 @@ export default function Hero({ onSubscribe }) {
         <div className={styles.previewWrapper}>
           <DashboardPreview />
           <div className={styles.previewBadge}>
-            ⚡ مطابقة آلية
+            ⚡ مطابقة آلية فورية
           </div>
         </div>
       </div>
     </section>
     
-    <StatsBar/>
+    {/* <StatsBar/> */}
     </>
   );
 }

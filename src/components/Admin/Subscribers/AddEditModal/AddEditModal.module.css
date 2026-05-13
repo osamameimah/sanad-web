@@ -87,7 +87,7 @@
 
 .inputGroup input:focus,
 .inputGroup select:focus {
-    border-color: #2563eb;
+    border-color: #106862;
     background: white;
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
@@ -100,7 +100,7 @@
 
 .saveBtn {
     flex: 2;
-    background: #2563eb;
+    background: #106862;
     color: white;
     border: none;
     padding: 12px;
@@ -111,7 +111,7 @@
 }
 
 .saveBtn:hover {
-    background: #1d4ed8;
+    background: #106862;
 }
 
 .cancelBtn {

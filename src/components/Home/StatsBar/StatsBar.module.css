@@ -1,8 +1,11 @@
-.bar {
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.11), rgba(212, 175, 55, 0.05));
-  border-top: 1px solid rgba(212, 175, 55, 0.14);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.14);
-  padding: 2rem var(--container-padding);
+ .bar {
+  /* خلفية فاتحة جداً مع تدرج أخضر باهت لإعطاء تميز عن بقية الأقسام */
+  background: linear-gradient(135deg, #dfe4e4 0%, #f3f1f1 100%);
+  border-top: 1px solid rgba(15, 118, 110, 0.08);
+  border-bottom: 1px solid rgba(15, 118, 110, 0.08);
+  padding: 3rem var(--container-padding);
+  position: relative;
+  z-index: 5;
 }
 
 .container {
@@ -15,23 +18,53 @@
 
 .stat {
   text-align: center;
+  position: relative;
+}
+
+/* إضافة فاصل أنيق بين العناصر في وضع الديسكتوب */
+.stat:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 0;
+  height: 60%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(15, 118, 110, 0.15), transparent);
 }
 
 .value {
-  color: var(--gold-primary);
-  font-weight: 900;
-  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  color: #0F766E; /* primary */
+  font-weight: 950; /* سمك خط عالي ليعطي انطباع القوة */
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  /* إضافة توهج نصي خفيف جداً */
+  text-shadow: 0 2px 10px rgba(15, 118, 110, 0.1);
 }
 
 .label {
-  color: #888;
-  font-size: 0.9rem;
-  margin-top: 0.25rem;
+  color: #64748B; /* mutedText */
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* تحسينات للشاشات الصغيرة */
+@media (max-width: 850px) {
+  .stat:not(:last-child)::after {
+    display: none; /* إخفاء الفواصل في الشاشات الصغيرة لتجنب التزاحم */
+  }
 }
 
 @media (max-width: 640px) {
+  .bar {
+    padding: 2.5rem 1rem;
+  }
   .container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 2.5rem;
+  }
+  .value {
+    font-size: 2rem;
   }
 }

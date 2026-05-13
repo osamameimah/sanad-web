@@ -1,4 +1,4 @@
-import { FEATURES } from '../../../data/index';
+ import { FEATURES } from '../../../data/index';
 import styles from './Features.module.css';
 
 export default function Features() {
@@ -12,14 +12,17 @@ export default function Features() {
             <span className={styles.highlight}>عملك المالي</span>
           </h2>
           <p className={styles.description}>
-            نظام متكامل يربط كل عمليات الدفع والفواتير والزبائن في منصة واحدة
+            نظام متكامل يربط كل عمليات الدفع والفواتير والزبائن في منصة واحدة وبأعلى دقة ممكنة.
           </p>
         </div>
 
         <div className={styles.grid}>
           {FEATURES.map((feature) => (
             <div key={feature.title} className={styles.card}>
-              <div className={styles.cardIcon}>{feature.icon}</div>
+              <div className={styles.cardIcon}>
+                {/* يمكنك هنا وضع الأيقونة مباشرة أو تغليفها بـ Span */}
+                <span>{feature.icon}</span>
+              </div>
               <h3 className={styles.cardTitle}>{feature.title}</h3>
               <p className={styles.cardDesc}>{feature.desc}</p>
             </div>

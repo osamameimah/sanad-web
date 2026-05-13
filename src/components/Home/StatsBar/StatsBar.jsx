@@ -1,4 +1,4 @@
-import { STATS } from '../../../data/index';
+ import { STATS } from '../../../data/index';
 import styles from './StatsBar.module.css';
 
 export default function StatsBar() {
@@ -11,8 +11,7 @@ export default function StatsBar() {
             <div className={styles.label}>{label}</div>
           </div>
         ))}
- 
       </div>
     </div>
-   );
+  );
 }

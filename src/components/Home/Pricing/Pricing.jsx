@@ -1,7 +1,11 @@
+ import React from 'react';
 import { PLANS } from '../../../data/index';
 import styles from './Pricing.module.css';
 
 export default function Pricing({ onSubscribe }) {
+  // استخدام ألوان الهوية الجديدة في حال لم تكن معرفة في بيانات الباقات
+  const primaryColor = "#0F766E"; 
+
   return (
     <section id="pricing" className={styles.section}>
       <div className={styles.container}>
@@ -9,7 +13,7 @@ export default function Pricing({ onSubscribe }) {
           <span className={styles.subtitle}>الباقات</span>
           <h2 className={styles.title}>اختر باقتك المناسبة</h2>
           <p className={styles.description}>
-            جميع الباقات تشمل دعماً فنياً وتحديثات مستمرة
+            جميع الباقات تشمل دعماً فنياً وتحديثات مستمرة لضمان استقرار أعمالك
           </p>
         </div>
 
@@ -18,26 +22,14 @@ export default function Pricing({ onSubscribe }) {
             <div
               key={plan.id}
               className={`${styles.card} ${plan.popular ? styles.popularCard : ''}`}
-              style={{
-                borderColor: plan.popular ? plan.color : 'rgba(255,255,255,0.08)',
-              }}
-              onMouseEnter={(e) => {
-                if (!plan.popular) {
-                  e.currentTarget.style.boxShadow = `0 30px 60px rgba(0,0,0,0.4),0 0 50px ${plan.glow}`;
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (!plan.popular) {
-                  e.currentTarget.style.boxShadow = 'none';
-                }
-              }}
+              // تم إزالة تعديلات Shadows اليدوية والاعتماد على CSS Module للأنظف
             >
               {plan.badge && (
                 <div className={styles.badge}>{plan.badge}</div>
               )}
 
               <div className={styles.icon}>{plan.icon}</div>
-              <h3 className={styles.cardTitle} style={{ color: plan.color }}>
+              <h3 className={styles.cardTitle} style={{ color: plan.popular ? primaryColor : '#16213A' }}>
                 {plan.name}
               </h3>
               <p className={styles.cardSubtitle}>{plan.subtitle}</p>
@@ -50,7 +42,7 @@ export default function Pricing({ onSubscribe }) {
               <div className={styles.features}>
                 {plan.features.map((feature) => (
                   <div key={feature} className={styles.feature}>
-                    <span className={styles.featureIcon} style={{ color: plan.color }}>
+                    <span className={styles.featureIcon} style={{ color: primaryColor }}>
                       ✓
                     </span>
                     <span className={styles.featureText}>{feature}</span>
@@ -58,25 +50,14 @@ export default function Pricing({ onSubscribe }) {
                 ))}
               </div>
 
-              <button
+              {/* <button
                 onClick={() => onSubscribe(plan.id)}
                 className={`${styles.selectButton} ${
                   plan.popular ? styles.primaryButton : styles.secondaryButton
                 }`}
-                style={!plan.popular ? { borderColor: `${plan.color}55`, color: plan.color } : {}}
-                onMouseEnter={(e) => {
-                  if (!plan.popular) {
-                    e.currentTarget.style.background = `${plan.color}22`;
-                  }
-                }}
-                onMouseLeave={(e) => {
-                  if (!plan.popular) {
-                    e.currentTarget.style.background = 'rgba(255,255,255,0.06)';
-                  }
-                }}
               >
                 اشترك في هذه الباقة
-              </button>
+              </button> */}
             </div>
           ))}
         </div>

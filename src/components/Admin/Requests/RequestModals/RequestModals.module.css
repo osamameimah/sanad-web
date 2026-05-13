@@ -36,8 +36,8 @@
     border: none; display: flex; align-items: center; justify-content: center; gap: 8px; flex: 1;
 }
 
-.saveBtn { background: #2563eb; color: white; composes: btn; }
-.saveBtn:hover { background: #1d4ed8; }
+.saveBtn { background: #106862; color: white; composes: btn; }
+.saveBtn:hover { background: #106862; }
 
 .deleteBtn { background: #ef4444; color: white; composes: btn; }
 .deleteBtn:hover { background: #dc2626; }
